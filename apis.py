@@ -6,13 +6,19 @@ st.write("""
 Esta aplicação simula o consumo de uma API que retorna conversas e comentários sobre séries e filmes da Netflix.
 """)
 
+# Caminho da imagem carregada
+imagem_path = "/mnt/data/9de0834d-6ca0-490d-8d78-9b3c84de3f65.png"
+
+# Exibir a imagem carregada
+img = Image.open(imagem_path)
+st.image(img, caption="Imagem carregada", use_column_width=True)
+
 # Dados fake em português com mais filmes e séries
 data = {
     "conversas": [
         {
             "titulo": "Stranger Things",
             "imagem": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Stranger_Things_logo.svg",
-            "imagem_fundo": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Stranger_Things_Season_3_2019.jpg",  # Imagem representativa
             "comentarios": [
                 {"usuario": "self", "texto": "A terceira temporada foi incrível!"},
                 {"usuario": "Ana", "texto": "A ambientação dos anos 80 é perfeita."},
@@ -22,7 +28,6 @@ data = {
         {
             "titulo": "The Witcher",
             "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/The_Witcher_logo.svg/1280px-The_Witcher_logo.svg.png",
-            "imagem_fundo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/The_Witcher_series_logo.svg/1280px-The_Witcher_series_logo.svg.png",  # Imagem representativa
             "comentarios": [
                 {"usuario": "self", "texto": "A história do Geralt é muito envolvente."},
                 {"usuario": "Carlos", "texto": "Quero ver mais monstros diferentes na próxima temporada."},
@@ -32,7 +37,6 @@ data = {
         {
             "titulo": "Black Mirror",
             "imagem": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Black_Mirror_logo.svg",
-            "imagem_fundo": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Black_Mirror_logo_and_credits.png",  # Imagem representativa
             "comentarios": [
                 {"usuario": "self", "texto": "Cada episódio é uma nova história, adoro isso."},
                 {"usuario": "Paula", "texto": "Alguns episódios são bem assustadores."},
@@ -42,7 +46,6 @@ data = {
         {
             "titulo": "La Casa de Papel",
             "imagem": "https://upload.wikimedia.org/wikipedia/commons/e/e1/La_Casa_de_Papel_logo.svg",
-            "imagem_fundo": "https://upload.wikimedia.org/wikipedia/commons/7/79/La_Casa_de_Papel_season_5_poster.jpg",  # Imagem representativa
             "comentarios": [
                 {"usuario": "self", "texto": "A estratégia do Professor é genial!"},
                 {"usuario": "Lucas", "texto": "Não consigo parar de assistir, muito viciante."},
@@ -52,7 +55,6 @@ data = {
         {
             "titulo": "Bridgerton",
             "imagem": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Bridgerton_logo.svg",
-            "imagem_fundo": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Bridgerton_poster_season_1.jpg",  # Imagem representativa
             "comentarios": [
                 {"usuario": "self", "texto": "O figurino é simplesmente maravilhoso."},
                 {"usuario": "Mariana", "texto": "A trama é cheia de romance e mistérios."},
@@ -62,7 +64,6 @@ data = {
         {
             "titulo": "O Gambito da Rainha",
             "imagem": "https://upload.wikimedia.org/wikipedia/commons/4/43/The_Queen%27s_Gambit_logo.svg",
-            "imagem_fundo": "https://upload.wikimedia.org/wikipedia/commons/5/53/The_Queen%27s_Gambit_poster.jpg",  # Imagem representativa
             "comentarios": [
                 {"usuario": "self", "texto": "A personagem principal é inspiradora."},
                 {"usuario": "Pedro", "texto": "A ambientação e o enredo são incríveis."},
@@ -72,7 +73,6 @@ data = {
         {
             "titulo": "Round 6",
             "imagem": "https://upload.wikimedia.org/wikipedia/commons/4/42/Squid_Game_logo.svg",
-            "imagem_fundo": "https://upload.wikimedia.org/wikipedia/commons/3/38/Squid_Game_season_1_poster.jpg",  # Imagem representativa
             "comentarios": [
                 {"usuario": "self", "texto": "A série coreana que conquistou o mundo."},
                 {"usuario": "Fernanda", "texto": "Muito intensa e cheia de suspense."},
@@ -91,8 +91,8 @@ titulo_escolhido = st.selectbox("Escolha uma série ou filme para ver os coment�
 # Selecionar a conversa referente ao título escolhido
 conversa_selecionada = next(c for c in data["conversas"] if c["titulo"] == titulo_escolhido)
 
-# Exibir a imagem de fundo do filme/série
-st.image(conversa_selecionada["imagem_fundo"], caption=f"Imagem de {titulo_escolhido}", use_column_width=True)
+# Exibir a imagem do filme/série
+st.image(conversa_selecionada["imagem"], width=400)
 
 st.subheader(f"💬 Conversa sobre {titulo_escolhido}")
 
