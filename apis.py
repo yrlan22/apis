@@ -1,9 +1,17 @@
 import streamlit as st
+from PIL import Image
 
 st.title("🎬 Visualizador de Conversas - Netflix Fake API")
 st.write("""
 Esta aplicação simula o consumo de uma API que retorna conversas e comentários sobre séries e filmes da Netflix.
 """)
+
+# Caminho da imagem carregada
+imagem_path = "/mnt/data/9de0834d-6ca0-490d-8d78-9b3c84de3f65.png"
+
+# Exibir a imagem carregada
+img = Image.open(imagem_path)
+st.image(img, caption="Imagem carregada", use_column_width=True)
 
 # Dados fake em português com mais filmes e séries
 data = {
@@ -92,4 +100,3 @@ st.subheader(f"💬 Conversa sobre {titulo_escolhido}")
 for comentario in conversa_selecionada["comentarios"]:
     usuario = "Você" if comentario["usuario"] == "self" else comentario["usuario"]
     st.markdown(f"**{usuario}**: {comentario['texto']}")
-
