@@ -125,4 +125,11 @@ if st.button("Confirmar resposta") and not mostrando_resposta:
         st.success("✅ Resposta correta!")
         st.session_state.pontuacao += 1
     else:
-        st.error(f"❌ Resposta errada! A correta era: **{pergunta
+        st.error(f"❌ Resposta errada! A correta era: **{pergunta_atual['resposta_certa']}**")
+
+# Próxima
+if mostrando_resposta:
+    if st.button("Próxima"):
+        st.session_state.etapa += 1
+        st.session_state.mostrando_resposta = False
+        st.rerun()
