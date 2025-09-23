@@ -48,7 +48,7 @@ perguntas = [
     },
     {
         "pergunta": "Que série é esta?",
-        "imagem_url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Bridgerton_logo.svg",
+        "imagem_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpuD5sYqEe7L97PVGV6VPcg0PsXt9Z4Vvu9A&s",
         "alternativas": ["Outlander", "Bridgerton", "The Crown", "Downton Abbey"],
         "resposta_certa": "Bridgerton"
     },
