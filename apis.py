@@ -121,5 +121,3 @@ if mostrando_resposta:
         st.session_state.mostrando_resposta = False
         st.experimental_rerun()
 
-# Adicionando áudio a partir de uma URL
-st.audio("https://www.youtube.com/watch?v=4uXyrUNE5iM", format="audio/mp3")
