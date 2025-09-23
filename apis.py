@@ -65,10 +65,10 @@ perguntas = [
         "resposta_certa": "Sintonia"
     },
     {
-        "pergunta": "Última – essa imagem representa qual série/filme?",
-        "imagem_url": "https://sm.ign.com/ign_br/screenshot/default/haikyu-1_arwc.jpg",
-        "alternativas": ["Haikyu", "Elite", "Money Heist", "Sky Rojo"],
-        "resposta_certa": "Haikyu"
+        "pergunta": "Última – que anime é esse?",
+        "imagem_url": "https://s2-techtudo.glbimg.com/HoMldM4KGCNWFh78XPF-Ogga0yY=/0x0:1380x825/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2024/r/A/MnpMb4R5egfC7H2AcktA/captura-de-tela-2024-10-27-141550.png",
+        "alternativas": ["Haikyu", "Dandadan", "Naruto", "Jujutsu Kaisen"],
+        "resposta_certa": "Dandadan"
     },
 ]
 
