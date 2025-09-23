@@ -30,7 +30,7 @@ perguntas = [
     },
     {
         "pergunta": "Que série é essa?",
-        "imagem_url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/La_Casa_de_Papel_logo.svg",
+        "imagem_url": "https://classic.exame.com/wp-content/uploads/2019/10/la-casa-de-papel-1.jpg",
         "alternativas": ["Elite", "Money Heist (La Casa de Papel)", "Narcos", "Sky Rojo"],
         "resposta_certa": "Money Heist (La Casa de Papel)"
     },
