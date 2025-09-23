@@ -19,8 +19,8 @@ perguntas = [
     {
         "pergunta": "Qual série é mostrada nesta imagem?",
         "imagem_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgb9Zt5T1wPmEeOnb4ZRiPuccJiJ89HxBexhRwtHE_0Kqqp-2QY6HiNuqIc3usaBp9buuLJDSY9QVtP9Wa-odj8cAVppf3zKPGVwjc2WoPhXXOuxFGTFP3WFDa3rT93-hmymVqVxbjh2Bs0hkIzR3sE14FH2gt3WAe8PI_hKBaE_NO5DLXDJllldt-E_w/s1106/The_Witcher_Netflix_Termporada_3a.jpg",
-        "alternativas": ["Vikings", "The Witcher", "Game of Thrones", "Castlevania"],
-        "resposta_certa": "The Witcher"
+        "alternativas": ["Vikings", "O Bruxo", "Game of Thrones", "Castlevania"],
+        "resposta_certa": "O Bruxo"
     },
     {
         "pergunta": "Qual é essa série?",
@@ -31,14 +31,14 @@ perguntas = [
     {
         "pergunta": "Que série é essa?",
         "imagem_url": "https://classic.exame.com/wp-content/uploads/2019/10/la-casa-de-papel-1.jpg",
-        "alternativas": ["Elite", "Money Heist (La Casa de Papel)", "Narcos", "Sky Rojo"],
-        "resposta_certa": "Money Heist (La Casa de Papel)"
+        "alternativas": ["Elite", "La casa de papel", "Narcos", "Sky Rojo"],
+        "resposta_certa": "La Casa de Papel"
     },
     {
         "pergunta": "E esta, qual é?",
-        "imagem_url": "https://upload.wikimedia.org/wikipedia/commons/4/42/Squid_Game_logo.svg",
-        "alternativas": ["Alice in Borderland", "Squid Game", "Lupin", "1899"],
-        "resposta_certa": "Squid Game"
+        "imagem_url": "https://i.ytimg.com/vi/YPdAF6F4xIU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCuCxb84spR_sfj5jF3eb2EZxBDSg",
+        "alternativas": ["Alice in Borderland", "Round 6", "Lupin", "1899"],
+        "resposta_certa": "Round 6"
     },
     {
         "pergunta": "Essa imagem representa qual série?",
