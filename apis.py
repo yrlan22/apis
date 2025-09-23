@@ -18,57 +18,57 @@ perguntas = [
     },
     {
         "pergunta": "Qual série é mostrada nesta imagem?",
-        "imagem_url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/The_Witcher_logo.svg",
-        "alternativas": ["Vikings", "The Witcher", "Game of Thrones", "Castlevania"],
-        "resposta_certa": "The Witcher"
+        "imagem_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgb9Zt5T1wPmEeOnb4ZRiPuccJiJ89HxBexhRwtHE_0Kqqp-2QY6HiNuqIc3usaBp9buuLJDSY9QVtP9Wa-odj8cAVppf3zKPGVwjc2WoPhXXOuxFGTFP3WFDa3rT93-hmymVqVxbjh2Bs0hkIzR3sE14FH2gt3WAe8PI_hKBaE_NO5DLXDJllldt-E_w/s1106/The_Witcher_Netflix_Termporada_3a.jpg",
+        "alternativas": ["Vikings", "O Bruxo", "Game of Thrones", "Castlevania"],
+        "resposta_certa": "O Bruxo"
     },
     {
         "pergunta": "Qual é essa série?",
-        "imagem_url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Black_Mirror_logo.svg",
+        "imagem_url": "https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2024/09/episodio-USS-Callister-de-black-mirror.png?w=1024",
         "alternativas": ["Love, Death & Robots", "Black Mirror", "Westworld", "Black Summer"],
         "resposta_certa": "Black Mirror"
     },
     {
         "pergunta": "Que série é essa?",
-        "imagem_url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/La_Casa_de_Papel_logo.svg",
-        "alternativas": ["Elite", "Money Heist (La Casa de Papel)", "Narcos", "Sky Rojo"],
-        "resposta_certa": "Money Heist (La Casa de Papel)"
+        "imagem_url": "https://classic.exame.com/wp-content/uploads/2019/10/la-casa-de-papel-1.jpg",
+        "alternativas": ["Elite", "La casa de papel", "Narcos", "Sky Rojo"],
+        "resposta_certa": "La casa de papel"
     },
     {
         "pergunta": "E esta, qual é?",
-        "imagem_url": "https://upload.wikimedia.org/wikipedia/commons/4/42/Squid_Game_logo.svg",
-        "alternativas": ["Alice in Borderland", "Squid Game", "Lupin", "1899"],
-        "resposta_certa": "Squid Game"
+        "imagem_url": "https://i.ytimg.com/vi/YPdAF6F4xIU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCuCxb84spR_sfj5jF3eb2EZxBDSg",
+        "alternativas": ["Alice in Borderland", "Round 6", "Lupin", "1899"],
+        "resposta_certa": "Round 6"
     },
     {
         "pergunta": "Essa imagem representa qual série?",
-        "imagem_url": "https://upload.wikimedia.org/wikipedia/commons/4/43/The_Queen%27s_Gambit_logo.svg",
+        "imagem_url": "https://jpimg.com.br/uploads/2020/12/o-gambito-da-rainha-ofc-1024x664.jpg",
         "alternativas": ["House of Cards", "The Queen's Gambit", "Designated Survivor", "Ozark"],
         "resposta_certa": "The Queen's Gambit"
     },
     {
         "pergunta": "Que série é esta?",
-        "imagem_url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Bridgerton_logo.svg",
+        "imagem_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpuD5sYqEe7L97PVGV6VPcg0PsXt9Z4Vvu9A&s",
         "alternativas": ["Outlander", "Bridgerton", "The Crown", "Downton Abbey"],
         "resposta_certa": "Bridgerton"
     },
     {
         "pergunta": "Qual é essa série/mídia?",
-        "imagem_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/The_Witcher_series_logo.svg/1280px-The_Witcher_series_logo.svg.png",
-        "alternativas": ["The Witcher", "The Mandalorian", "Lord of the Rings", "Cursed"],
-        "resposta_certa": "The Witcher"
+        "imagem_url": "https://s2-techtudo.glbimg.com/PBPfMFqS6FqcLaTJWaqZ0ZupLmw=/0x0:1044x562/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2023/P/R/rUKVWXSDypvwL1fwM49A/outer-banks-imdb-techtudo.jpg",
+        "alternativas": ["Outer Banks", "The Mandalorian", "Lord of the Rings", "Cursed"],
+        "resposta_certa": "Outer Banks"
     },
     {
         "pergunta": "Essa imagem é de qual título?",
-        "imagem_url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Stranger_Things_Season_3_2019.jpg",
-        "alternativas": ["Lost in Space", "Stranger Things", "Dark", "Locke & Key"],
-        "resposta_certa": "Stranger Things"
+        "imagem_url": "https://rollingstone.com.br/wp-content/uploads/sintonia-serie-brasileira-netflix-2-temporada-foto-divulgacao.jpg",
+        "alternativas": ["Lost in Space", "Sintonia", "Dark", "Locke & Key"],
+        "resposta_certa": "Sintonia"
     },
     {
         "pergunta": "Última – essa imagem representa qual série/filme?",
-        "imagem_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/La_Casa_de_Papel_season_5_poster.jpg",
-        "alternativas": ["La Casa de Papel", "Elite", "Money Heist", "Sky Rojo"],
-        "resposta_certa": "La Casa de Papel"
+        "imagem_url": "https://sm.ign.com/ign_br/screenshot/default/haikyu-1_arwc.jpg",
+        "alternativas": ["Haikyu", "Elite", "Money Heist", "Sky Rojo"],
+        "resposta_certa": "Haikyu"
     },
 ]
 
@@ -120,3 +120,6 @@ if mostrando_resposta:
         st.session_state.etapa += 1
         st.session_state.mostrando_resposta = False
         st.experimental_rerun()
+
+# Adicionando áudio a partir de uma URL
+st.audio("https://www.youtube.com/watch?v=4uXyrUNE5iM", format="audio/mp3")
