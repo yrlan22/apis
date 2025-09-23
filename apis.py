@@ -24,7 +24,7 @@ perguntas = [
     },
     {
         "pergunta": "Qual é essa série?",
-        "imagem_url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Black_Mirror_logo.svg",
+        "imagem_url": "https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2024/09/episodio-USS-Callister-de-black-mirror.png?w=1024",
         "alternativas": ["Love, Death & Robots", "Black Mirror", "Westworld", "Black Summer"],
         "resposta_certa": "Black Mirror"
     },
