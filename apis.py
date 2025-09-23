@@ -54,21 +54,21 @@ perguntas = [
     },
     {
         "pergunta": "Qual é essa série/mídia?",
-        "imagem_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/The_Witcher_series_logo.svg/1280px-The_Witcher_series_logo.svg.png",
-        "alternativas": ["The Witcher", "The Mandalorian", "Lord of the Rings", "Cursed"],
-        "resposta_certa": "The Witcher"
+        "imagem_url": "https://s2-techtudo.glbimg.com/PBPfMFqS6FqcLaTJWaqZ0ZupLmw=/0x0:1044x562/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2023/P/R/rUKVWXSDypvwL1fwM49A/outer-banks-imdb-techtudo.jpg",
+        "alternativas": ["Outer Banks", "The Mandalorian", "Lord of the Rings", "Cursed"],
+        "resposta_certa": "Outer Banks"
     },
     {
         "pergunta": "Essa imagem é de qual título?",
-        "imagem_url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Stranger_Things_Season_3_2019.jpg",
-        "alternativas": ["Lost in Space", "Stranger Things", "Dark", "Locke & Key"],
-        "resposta_certa": "Stranger Things"
+        "imagem_url": "https://rollingstone.com.br/wp-content/uploads/sintonia-serie-brasileira-netflix-2-temporada-foto-divulgacao.jpg",
+        "alternativas": ["Lost in Space", "Sintonia", "Dark", "Locke & Key"],
+        "resposta_certa": "Sintonia"
     },
     {
         "pergunta": "Última – essa imagem representa qual série/filme?",
-        "imagem_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/La_Casa_de_Papel_season_5_poster.jpg",
-        "alternativas": ["La Casa de Papel", "Elite", "Money Heist", "Sky Rojo"],
-        "resposta_certa": "La Casa de Papel"
+        "imagem_url": "https://sm.ign.com/ign_br/screenshot/default/haikyu-1_arwc.jpg",
+        "alternativas": ["Haikyu", "Elite", "Money Heist", "Sky Rojo"],
+        "resposta_certa": "Haikyu"
     },
 ]
 
