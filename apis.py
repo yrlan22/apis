@@ -32,7 +32,7 @@ perguntas = [
         "pergunta": "Que série é essa?",
         "imagem_url": "https://classic.exame.com/wp-content/uploads/2019/10/la-casa-de-papel-1.jpg",
         "alternativas": ["Elite", "La casa de papel", "Narcos", "Sky Rojo"],
-        "resposta_certa": "La Casa de Papel"
+        "resposta_certa": "La casa de papel"
     },
     {
         "pergunta": "E esta, qual é?",
