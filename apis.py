@@ -2,6 +2,7 @@ import streamlit as st
 from PIL import Image
 import requests
 from io import BytesIO
+import random  # Usado para embaralhar
 
 st.set_page_config(page_title="🎬 Quiz Netflix com Imagens", layout="centered")
 
@@ -65,61 +66,70 @@ perguntas = [
         "resposta_certa": "Sintonia"
     },
     {
-        "pergunta": "Última – essa imagem representa qual série/filme?",
-        "imagem_url": "https://sm.ign.com/ign_br/screenshot/default/haikyu-1_arwc.jpg",
-        "alternativas": ["Haikyu", "Elite", "Money Heist", "Sky Rojo"],
-        "resposta_certa": "Haikyu"
+        "pergunta": "Última – que anime é esse?",
+        "imagem_url": "https://s2-techtudo.glbimg.com/HoMldM4KGCNWFh78XPF-Ogga0yY=/0x0:1380x825/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2024/r/A/MnpMb4R5egfC7H2AcktA/captura-de-tela-2024-10-27-141550.png",
+        "alternativas": ["Haikyu", "Dandadan", "Naruto", "Jujutsu Kaisen"],
+        "resposta_certa": "Dandadan"
     },
 ]
 
-# Estado para o quiz
+# Estado inicial
 if "etapa" not in st.session_state:
     st.session_state.etapa = 0
     st.session_state.pontuacao = 0
     st.session_state.mostrando_resposta = False
+    st.session_state.respostas_embaralhadas = []
 
 etapa = st.session_state.etapa
 pontuacao = st.session_state.pontuacao
 mostrando_resposta = st.session_state.mostrando_resposta
 
-# Se acabar todas perguntas
+# Fim do quiz
 if etapa >= len(perguntas):
     st.success(f"🏁 Fim do Quiz! Sua pontuação final: {pontuacao} de {len(perguntas)}")
     if st.button("🔁 Recomeçar"):
         st.session_state.etapa = 0
         st.session_state.pontuacao = 0
         st.session_state.mostrando_resposta = False
+        st.session_state.respostas_embaralhadas = []
+        st.rerun()
     st.stop()
 
 # Pergunta atual
 pergunta_atual = perguntas[etapa]
+
+# Embaralhar alternativas apenas uma vez por pergunta
+if len(st.session_state.respostas_embaralhadas) <= etapa:
+    alternativas_embaralhadas = random.sample(pergunta_atual["alternativas"], len(pergunta_atual["alternativas"]))
+    st.session_state.respostas_embaralhadas.append(alternativas_embaralhadas)
+else:
+    alternativas_embaralhadas = st.session_state.respostas_embaralhadas[etapa]
+
+# Exibição
 st.subheader(f"Pergunta {etapa + 1} de {len(perguntas)}")
 st.write(pergunta_atual["pergunta"])
 
-# Mostrar imagem da pergunta
+# Imagem
 response = requests.get(pergunta_atual["imagem_url"])
 if response.status_code == 200:
     img = Image.open(BytesIO(response.content))
-    st.image(img, caption="", use_container_width=True)
+    st.image(img, use_container_width=True)
 
 # Alternativas
-resposta_escolhida = st.radio("Escolha uma opção:", pergunta_atual["alternativas"], key=f"pergunta_{etapa}")
+resposta_escolhida = st.radio("Escolha uma opção:", alternativas_embaralhadas, key=f"pergunta_{etapa}")
 
-# Botão de confirmar
-if st.button("Confirmar resposta"):
+# Confirmação
+if st.button("Confirmar resposta") and not mostrando_resposta:
     st.session_state.mostrando_resposta = True
     if resposta_escolhida == pergunta_atual["resposta_certa"]:
         st.success("✅ Resposta correta!")
         st.session_state.pontuacao += 1
     else:
-        st.error(f"❌ Resposta errada! A resposta correta era: **{pergunta_atual['resposta_certa']}**")
+        st.error(f"❌ Resposta errada! A correta era: **{pergunta_atual['resposta_certa']}**")
 
-# Próxima pergunta
+# Próxima
 if mostrando_resposta:
     if st.button("Próxima"):
         st.session_state.etapa += 1
         st.session_state.mostrando_resposta = False
-        st.experimental_rerun()
-
-# Adicionando áudio a partir de uma URL
-st.audio("https://www.youtube.com/watch?v=4uXyrUNE5iM", format="audio/mp3")
+        st.rerun()
