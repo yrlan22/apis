@@ -12,7 +12,7 @@ st.write("Teste seus conhecimentos sobre séries e filmes da Netflix! Olhe a ima
 perguntas = [
     {
         "pergunta": "Qual série da Netflix é essa imagem?",
-        "imagem_url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Stranger_Things_logo.svg",
+        "imagem_url": "https://atlantidasc.com.br/wp-content/uploads/2025/07/Nova-temporada-de-Stranger-Things-deve-ser-a-conclusao-da-historia-Foto_-Netflix-Divulgacao.jpg",
         "alternativas": ["Dark", "Stranger Things", "Black Mirror", "The OA"],
         "resposta_certa": "Stranger Things"
     },
