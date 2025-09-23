@@ -42,7 +42,7 @@ perguntas = [
     },
     {
         "pergunta": "Essa imagem representa qual série?",
-        "imagem_url": "https://upload.wikimedia.org/wikipedia/commons/4/43/The_Queen%27s_Gambit_logo.svg",
+        "imagem_url": "https://jpimg.com.br/uploads/2020/12/o-gambito-da-rainha-ofc-1024x664.jpg",
         "alternativas": ["House of Cards", "The Queen's Gambit", "Designated Survivor", "Ozark"],
         "resposta_certa": "The Queen's Gambit"
     },
