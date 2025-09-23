@@ -3,12 +3,13 @@ from PIL import Image
 import requests
 from io import BytesIO
 
+# Configuração da página
 st.set_page_config(page_title="🎬 Quiz Netflix com Imagens", layout="centered")
 
 st.title("🎬 Quiz Netflix com Imagens")
 st.write("Teste seus conhecimentos sobre séries e filmes da Netflix! Olhe a imagem e responda.")
 
-# Perguntas do quiz com imagens
+# Lista de perguntas
 perguntas = [
     {
         "pergunta": "Qual série da Netflix é essa imagem?",
@@ -36,7 +37,7 @@ perguntas = [
     },
     {
         "pergunta": "E esta, qual é?",
-        "imagem_url": "https://i.ytimg.com/vi/YPdAF6F4xIU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCuCxb84spR_sfj5jF3eb2EZxBDSg",
+        "imagem_url": "https://i.ytimg.com/vi/YPdAF6F4xIU/hq720.jpg",
         "alternativas": ["Alice in Borderland", "Round 6", "Lupin", "1899"],
         "resposta_certa": "Round 6"
     },
@@ -72,52 +73,57 @@ perguntas = [
     },
 ]
 
-# Estado para o quiz
+# Inicialização de estado
 if "etapa" not in st.session_state:
     st.session_state.etapa = 0
     st.session_state.pontuacao = 0
-    st.session_state.mostrando_resposta = False
+    st.session_state.resposta_confirmada = False
+    st.session_state.resposta_certa = False
 
 etapa = st.session_state.etapa
 pontuacao = st.session_state.pontuacao
-mostrando_resposta = st.session_state.mostrando_resposta
 
-# Se acabar todas perguntas
+# Verifica se terminou
 if etapa >= len(perguntas):
     st.success(f"🏁 Fim do Quiz! Sua pontuação final: {pontuacao} de {len(perguntas)}")
     if st.button("🔁 Recomeçar"):
         st.session_state.etapa = 0
         st.session_state.pontuacao = 0
-        st.session_state.mostrando_resposta = False
+        st.session_state.resposta_confirmada = False
+        st.session_state.resposta_certa = False
+        st.experimental_rerun()
     st.stop()
 
-# Pergunta atual
+# Mostra pergunta
 pergunta_atual = perguntas[etapa]
 st.subheader(f"Pergunta {etapa + 1} de {len(perguntas)}")
 st.write(pergunta_atual["pergunta"])
 
-# Mostrar imagem da pergunta
+# Mostra imagem
 response = requests.get(pergunta_atual["imagem_url"])
 if response.status_code == 200:
     img = Image.open(BytesIO(response.content))
-    st.image(img, caption="", use_container_width=True)
+    st.image(img, use_container_width=True)
 
 # Alternativas
-resposta_escolhida = st.radio("Escolha uma opção:", pergunta_atual["alternativas"], key=f"pergunta_{etapa}")
+resposta_escolhida = st.radio("Escolha uma opção:", pergunta_atual["alternativas"], key=etapa)
 
-# Botão de confirmar
-if st.button("Confirmar resposta"):
-    st.session_state.mostrando_resposta = True
-    if resposta_escolhida == pergunta_atual["resposta_certa"]:
-        st.success("✅ Resposta correta!")
-        st.session_state.pontuacao += 1
-    else:
-        st.error(f"❌ Resposta errada! A resposta correta era: **{pergunta_atual['resposta_certa']}**")
+# Botão confirmar
+if not st.session_state.resposta_confirmada:
+    if st.button("Confirmar resposta"):
+        st.session_state.resposta_confirmada = True
+        if resposta_escolhida == pergunta_atual["resposta_certa"]:
+            st.success("✅ Resposta correta!")
+            st.session_state.pontuacao += 1
+            st.session_state.resposta_certa = True
+        else:
+            st.error(f"❌ Resposta errada! A resposta correta era: **{pergunta_atual['resposta_certa']}**")
+            st.session_state.resposta_certa = False
 
-# Próxima pergunta
-if mostrando_resposta:
+# Botão próxima
+if st.session_state.resposta_confirmada:
     if st.button("Próxima"):
         st.session_state.etapa += 1
-        st.session_state.mostrando_resposta = False
+        st.session_state.resposta_confirmada = False
+        st.session_state.resposta_certa = False
         st.experimental_rerun()
-
